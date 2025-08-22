@@ -8,6 +8,7 @@ import LoginPage from "@/pages/login";
 import POSPage from "@/pages/pos";
 import ProductsPage from "@/pages/products";
 import ReportsPage from "@/pages/reports";
+import SettingsPage from "@/pages/settings";
 import NotFound from "@/pages/not-found";
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -42,6 +43,11 @@ function Router() {
       <Route path="/reports" component={() => (
         <ProtectedRoute>
           <ReportsPage />
+        </ProtectedRoute>
+      )} />
+      <Route path="/settings" component={() => (
+        <ProtectedRoute>
+          <SettingsPage />
         </ProtectedRoute>
       )} />
       <Route component={NotFound} />

@@ -36,11 +36,6 @@ export default function BottomNavigation({ currentPage }: BottomNavigationProps)
   ];
 
   const handleNavigation = (path: string, id: string) => {
-    if (id === "settings") {
-      // TODO: Implement settings screen
-      alert("Pengaturan akan segera tersedia");
-      return;
-    }
     setLocation(path);
   };
 
